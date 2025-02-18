@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        /* Basic page setup */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        /* Container settings */
+        .page-content {
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Card setup */
+        .card {
+            display: flex;
+            flex-direction: row;
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+        }
+
+        /* Profile section */
+        .user-profile {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            width: 30%;
+        }
+
+        .user-profile img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+        }
+
+        .user-profile h6 {
+            margin-top: 15px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .user-profile p {
+            font-size: 1em;
+            margin-top: 10px;
+        }
+
+        /* Information section */
+        .card-block {
+            padding: 20px;
+            width: 70%;
+        }
+
+        .card-block h6 {
+            font-size: 1.2em;
+            font-weight: 600;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .user-info p {
+            margin: 10px 0;
+            font-size: 1.1em;
+        }
+
+        .user-info p span {
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Logout button */
+        .logout-button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background-color: #f44336;
+            color: white;
+            text-align: center;
+            font-size: 1.1em;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .logout-button:hover {
+            background-color: #e53935;
+        }
+
+        /* Responsive design */
+        @media screen and (max-width: 768px) {
+            .card {
+                flex-direction: column;
+                align-items: center;
+            }                                                                                                                                                                                                                                                                                                                                              
+            .user-profile, .card-block {
+                width: 100%;
+                padding: 15px;
+            }
+
+            .user-profile img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page-content">
+        <div class="card">
+            <!-- Profile Section -->
+            <div class="user-profile">
+                <div class="card-block text-center text-white">
+                    <div class="m-b-25">
+                        <!-- Gender-Neutral Icon -->
+                        <img src="https://img.icons8.com/ios/452/user.png" class="img-radius" alt="User-Profile-Image">
+                    </div>
+                    <h6>{{ user[0] }}</h6> <!-- Username -->
+                </div>
+            </div>
+            <!-- Information Section -->
+            <div class="card-block">
+                <h6>Information</h6>
+                <div class="user-info">
+                    <p><span>Username:</span> {{ user[0] }}</p> <!-- Username -->
+                    <p><span>First Name:</span> {{ user[2] }}</p> <!-- First Name -->
+                    <p><span>Last Name:</span> {{ user[3] }}</p> <!-- Last Name -->
+                    <p><span>Email:</span> {{ user[4] }}</p> <!-- Email -->
+                </div>
+                <!-- Logout Button -->
+                <a href="{{ url_for('logout') }}" class="logout-button">Logout</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
+

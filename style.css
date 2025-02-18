@@ -1,0 +1,137 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f9f4; /* Soft light green background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container Styles */
+.container {
+    width: 450px; /* Container width */
+    background-color: #ffffff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Soft shadow for depth */
+    padding: 30px;
+    text-align: center;
+}
+
+/* Heading Styles */
+h2 {
+    margin-bottom: 30px;
+    color: #4CAF50; /* Soft green text for heading */
+    font-size: 28px;
+}
+
+/* Error Message Styles */
+.error {
+    color: #e74c3c; /* Red color for error messages */
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* Tab Button Styles */
+.tab {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.tab button {
+    background: none;
+    border: none;
+    color: #4CAF50; /* Soft green color for buttons */
+    cursor: pointer;
+    font-size: 18px;
+    padding: 12px 25px;
+    margin: 0 10px;
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.tab button.active {
+    font-weight: bold;
+    color: #2e8b57; /* Darker green for active button */
+    border-bottom: 3px solid #2e8b57; /* Active button indicator */
+}
+
+.tab button:hover {
+    color: #388e3c; /* Slightly darker green on hover */
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Input Styles */
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    margin: 12px 0;
+    padding: 12px;
+    border: 1px solid #4CAF50; /* Green border for inputs */
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #f0f8f0; /* Very light green background for input fields */
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    outline: none;
+    border-color: #2e8b57; /* Darker green border on focus */
+    background-color: #e8f5e9; /* Light green background on focus */
+}
+
+/* Submit Button Styles */
+button {
+    width: 100%;
+    background-color: #4CAF50; /* Soft green button */
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 15px;
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+button:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+/* User Info Box Styles */
+.user-info {
+    background-color: #e8f5e9; /* Light green background for user info box */
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.user-info h3 {
+    margin: 0 0 15px;
+    font-size: 20px;
+    color: #388e3c; /* Dark green for user info heading */
+}
+
+/* Logout Button Styles */
+.logout-button {
+    background-color: #4CAF50; /* Green logout button */
+    color: white;
+    padding: 12px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
